@@ -42,16 +42,22 @@
     }
 </style>
 <body>
-    <header>header</header>
-
+<header>header</header>
+<main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <ol class="breadcrumb my-4">
-              {% block breadcrumb %}
-              {% endblock %}
-            </ol>
+        <a class="navbar-brand" href="{% url 'boards' %}">Форум</a>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <ol class="breadcrumb my-4">
+            {% block breadcrumb %}
+            {% endblock %}
+        </ol>
             {% block content %}
             {% endblock %}
-          </div>
+    </div>
   <a href="{% url 'index' %}">Назад на главную</a>
 </main>
 <footer>
