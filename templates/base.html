@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Форум{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<style>
+    body{
+        background-image: url('https://st.depositphotos.com/1014680/2099/i/950/depositphotos_20999525-stock-photo-paper-background.jpg');
+        background-size: 100%;
+    }
+    h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    li{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    footer{
+        background-color: rgba(52, 213, 235,0.3);
+    }
+    header{
+        background-color: rgba(11, 201, 226, 0);
+    }
+    h3{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    a:hover{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    #menu{
+        background-color: rgba(247, 218, 54, 0.623);
+    }
+</style>
+<body>
+    <header>header</header>
+
+        <div class="container">
+            <ol class="breadcrumb my-4">
+              {% block breadcrumb %}
+              {% endblock %}
+            </ol>
+            {% block content %}
+            {% endblock %}
+          </div>
+  <a href="{% url 'index' %}">Назад на главную</a>
+</main>
+<footer>
+    Created by Telnov Vladimir as a PetProject
+</footer>
+</body>
+</html>
