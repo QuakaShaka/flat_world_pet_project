@@ -10,7 +10,7 @@
       {% render_field field class="form-control is-invalid" %}
       {% for error in field.errors %}
         <div class="invalid-feedback">
-          Обязательно к заполнению.
+          {{ error }}
         </div>
       {% endfor %}
 
@@ -23,7 +23,7 @@
 
   {% if field.help_text %}
     <small class="form-text text-muted">
-      {{ field.help_text }}
+      {{ field.help_text|safe }}
     </small>
   {% endif %}
 </div>
