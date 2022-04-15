@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Форум</title>
+</head>
+<style>
+    body{
+        background-image: url('https://st.depositphotos.com/1014680/2099/i/950/depositphotos_20999525-stock-photo-paper-background.jpg');
+        background-size: 100%;
+    }
+    h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    li{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    footer{
+        background-color: rgba(52, 213, 235,0.3);
+    }
+    header{
+        background-color: rgba(11, 201, 226, 0);
+    }
+    h3{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    a:hover{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    #menu{
+        background-color: rgba(247, 218, 54, 0.623);
+    }
+</style>
+<body>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <header>
+        header
+    </header>
+    <main>
+        <div class="container">
+        <h3>Форум</h3>
+            <table class="table table-dark">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Разделы</th>
+                  <th>Сообщения</th>
+                  <th>Темы</th>
+                  <th>Последнее сообщение</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for board in boards %}
+                  <tr>
+                    <td>
+                      <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+                      <small class="text-muted d-block">{{ board.description }}</small>
+                    </td>
+                    <td class="align-middle">0</td>
+                    <td class="align-middle">0</td>
+                    <td></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </div>
+        <a href="\">Назад на главную</a>
+    </main>
+    <footer>
+        Created by Telnov Vladimir as a PetProject
+    </footer>
+</body>
+</html>

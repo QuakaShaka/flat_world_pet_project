@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Гид по «Плоскому миру» Терри Пратчетта</title>
+</head>
+<style>  
+    body{
+        background-image: url('https://st.depositphotos.com/1014680/2099/i/950/depositphotos_20999525-stock-photo-paper-background.jpg');
+        background-size: 100%;
+    }
+    h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    li{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    footer{
+        background-color: rgba(52, 213, 235,0.3);
+    }
+    header{
+        background-color: rgba(11, 201, 226, 0);
+    }
+    h3{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    a{
+        text-decoration:none;
+        color: black;
+        text-align: center;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    #menu{
+        background-color: rgba(247, 218, 54, 0.384);
+    }
+    .btn{
+        background-color: rgba(247, 218, 54, 0.486);
+        text-decoration:none;
+        color: black;
+        text-align: center;
+    }
+    .btn:hover{
+        text-decoration:none;
+    }
+</style>
+<body>
+    <header>
+        <div id='menu' class="container-fluid">
+            <div class="row align-items-center">  
+                <div class="col">  
+                    <a href="">
+                        <button type="button" class="btn btn-block"><h3><strong>Главная страница</strong></h3></button>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="\boards">
+                        <button type="button" class="btn btn-block"><h3><strong>Форум</strong></h3></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div>
+        <h1 class="text-center fst-italic text-decoration-underline">Гид по «Плоскому миру» Терри Пратчетта</h1>
+        <div>
+            <a href="https://static.wikia.nocookie.net/discworld/images/0/0b/008b8499e58c2616ae6f7b421fddb34fe53822c6.jpg/revision/latest?cb=20140225124549&path-prefix=ru">
+            <img class="rounded mx-auto d-block" width="500px" src="https://static.wikia.nocookie.net/discworld/images/0/0b/008b8499e58c2616ae6f7b421fddb34fe53822c6.jpg/revision/latest?cb=20140225124549&path-prefix=ru">
+            </a>
+            <p class="text-center fw-bold">Карта плоского мира (открывается в полном масштабе  по щелчку)</p>
+        </div>
+    </div>
+    <p><strong>Все романы о "Плоском Мире" разделены на циклы. Эти циклы не зависят друг от друга и их можно читать в любом порядке. Порядок же прочтения книг в циклах указан в списках ниже.</strong>
+    </p>
+    <p class="fw-bold">Циклы романов:</p>
+    <div id='cicles'class="container-fluid">
+        <ul>
+            <div class ='row'>
+                <div class="col">
+                    <li><strong><mark>Ринсвинд</mark></strong></li>
+                    <div class="row">
+                        <div class="col">
+                        <ol>
+                            <li>Цвет волшебства</li>
+                            <li>Безумная звезда</li>
+                            <li>Посох и шляпа, Эрик</li>
+                            <li>Интересные времена</li>
+                        </ol>
+                        </div>
+                        <div class="col">
+                        <ol>
+                            <li value="5">Последний континент</li>
+                            <li>Последний герой</li>
+                            <li>Незримые Академики</li>
+                        </div>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col">
+                    <li><strong><mark>Ведьмы</mark></strong></li>
+                    <div class="row">
+                        <div class="col">
+                            <ol>
+                            <li>Творцы заклинаний</li>
+                            <li>Вещие сестрички</li>
+                            <li>Ведьмы за границей</li>
+                            <li>Дамы и Господа</li>
+                            </ol>
+                        </div>
+                        <div class="col">
+                            <ol>
+                            <li value='5'>Маскарад</li>
+                            <li>Carpe Jugulum. Хватай за горло!</li>
+                            <li>Маленький свободный народец</li>
+                            <li>Шляпа, полная неба</li>
+                            </ol>
+                        </div>
+                        <div class="col">
+                            <ol>
+                            <li value="9">Господин Зима</li>
+                            <li>Платье цвета полуночи</li>
+                            <li>Пастушья корона</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <li><strong><mark>Смерть</mark></strong></li>
+                <div class="row">
+                    <div class="col">
+                    <ol>
+                        <li>Мор, ученик Смерти</li>
+                        <li>Мрачный Жнец</li>
+                        <li>Роковая музыка</li>
+                    </ol>
+                    </div>
+                    <div class="col">
+                        <ol>
+                        <li value="4">Санта-Хрякус</li>
+                        <li>Вор Времени</li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <li><strong><mark>Городская стража</mark></strong></li>
+                <div class="row">
+                    <div class="col">
+                    <ol>
+                        <li>Стража! Стража!</li>
+                        <li>К оружию! К оружию!</li>
+                        <li>Ноги из глины</li>
+                        <li>Патриот</li>
+                    </ol>
+                    </div>
+                    <div class="col">
+                    <ol>
+                        <li value="5">Пятый элефант</li>
+                        <li>Ночная Стража</li>
+                        <li>Шмяк!</li>
+                        <li>Дело табак</li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+                <li><strong><mark>Мокриц фон Липвиг</mark></strong></li>
+                    <ol>
+                        <li>Держи марку!</li>
+                        <li>Делай деньги!</li>
+                        <li>Поддай пару!</li>
+                    </ol>
+            </div>
+            <div class="col">
+                <li><strong><mark>Наука Плоского мира</mark></strong></li>
+                    <ol>
+                        <li>Наука Плоского мира</li>
+                        <li>Наука Плоского мира. Книга 2. Глобус</li>
+                        <li>Наука Плоского мира. Книга 3. Часы Дарвина</li>
+                        <li>Наука Плоского мира. Книга 4. День Страшного Суда</li>
+                    </ol>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+                <li><strong><mark>Внецикловые произведения</mark></strong></li>
+                    <ol>
+                        <li>Пирамиды</li>
+                        <li>Движущиеся картинки</li>
+                        <li>Мелкие боги</li>
+                        <li>Изумительный Морис и его ученые грызуны</li>
+                        <li>Правда</li>
+                        <li>Пехотная баллада</li>
+                    </ol>
+            </div>
+            </div>
+        </ul>
+    </div>
+    <h3>
+        <strong>
+        Не знаете с чего начать? Обсудите это на <a href='\boards'>форуме!</a>
+        </strong>
+    </h3>
+    </main>
+    <footer>Created by Telnov Vladimir as a PetProject</footer>
+</body>
+</html>
