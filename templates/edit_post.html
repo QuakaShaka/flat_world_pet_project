@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% block title %}Edit post{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+<script>
+  const easyMDE = new EasyMDE();
+  </script>
+{% endblock %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'boards' %}">Boards</a></li>
