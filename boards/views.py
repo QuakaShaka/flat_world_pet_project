@@ -35,7 +35,7 @@ def new_topic(request, pk):
                 topic=topic,
                 created_by=request.user  
             )
-            return redirect('topic_posts', pk=board.pk) 
+            return redirect('topic_posts', pk=pk, topic_pk=topic.pk) 
     else:
         form = NewTopicForm()
     return render(request, 'new_topic.html', {'board': board, 'form': form})
