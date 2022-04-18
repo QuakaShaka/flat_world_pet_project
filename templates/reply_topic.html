@@ -4,16 +4,6 @@
 
 {% block title %}Post a reply{% endblock %}
 
-{% block stylesheet %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
-{% endblock %}
-
-{% block javascript %}
-<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
-<script>
-  const easyMDE = new EasyMDE();
-  </script>
-{% endblock %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'boards' %}">Boards</a></li>
@@ -30,7 +20,7 @@
     <button type="submit" class="btn btn-success">Post a reply</button>
   </form>
 
-  {% for post in topic.posts.all %}
+  {% for post in topic.get_last_ten_posts %}
     <div class="card mb-2">
       <div class="card-body p-3">
         <div class="row mb-3">

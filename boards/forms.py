@@ -6,7 +6,7 @@ class NewTopicForm(forms.ModelForm):
     message = forms.CharField(
         widget=forms.Textarea(
             attrs={'rows': 5, 'placeholder': 'Задайте свой вопрос здесь.'}
-        ), 
+        ),
         max_length=4000,
         help_text='Максимально символов: 4000.',
         label = 'Сообщение'
