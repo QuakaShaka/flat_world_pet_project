@@ -17,9 +17,12 @@ class NewTopicForm(forms.ModelForm):
         fields = ['name', 'message']
         labels = {
             'name':'Тема',
+            'message': 'Сообщение'
         }
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['message', ]
+
+        

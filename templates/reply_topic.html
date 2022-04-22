@@ -2,14 +2,14 @@
 
 {% load static %}
 
-{% block title %}Post a reply{% endblock %}
+{% block title %}Ответить{% endblock %}
 
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item"><a href="{% url 'boards' %}">Boards</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'boards' %}">Форум</a></li>
   <li class="breadcrumb-item"><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
   <li class="breadcrumb-item"><a href="{% url 'topic_posts' topic.board.pk topic.pk %}">{{ topic.name }}</a></li>
-  <li class="breadcrumb-item active">Post a reply</li>
+  <li class="breadcrumb-item active">Ответить</li>
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
   <form method="post" class="mb-4" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Post a reply</button>
+    <button type="submit" class="btn btn-success">Ответить</button>
   </form>
 
   {% for post in topic.get_last_ten_posts %}

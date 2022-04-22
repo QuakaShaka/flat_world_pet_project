@@ -28,6 +28,8 @@
     }
     footer{
         background-color: rgba(52, 213, 235,0.3);
+        position: fixed;
+        bottom:0; left:0;
     }
     header{
         background-color: rgba(11, 201, 226, 0);
@@ -46,6 +48,8 @@
     }
     #menu{
         background-color: rgba(247, 218, 54, 0.384);
+        position: fixed;
+        top:0; left:0;
     }
     .btn{
         background-color: rgba(247, 218, 54, 0.486);
@@ -56,17 +60,23 @@
     .btn:hover{
         text-decoration:none;
     }
+    #head{
+        margin-top: 50px;
+    }
+    #boot{
+        margin-bottom: 20px;
+    }
 </style>
 <body>
     <header>
         <div id='menu' class="container-fluid">
             <div class="row align-items-center">  
-                <div class="col">  
+                <div class="col-9">  
                     <a href="">
                         <button type="button" class="btn btn-block"><h3><strong>Главная страница</strong></h3></button>
                     </a>
                 </div>
-                <div class="col">
+                <div class="col-3">
                     <a href="\boards">
                         <button type="button" class="btn btn-block"><h3><strong>Форум</strong></h3></button>
                     </a>
@@ -76,7 +86,7 @@
     </header>
     <main>
     <div>
-        <h1 class="text-center fst-italic text-decoration-underline">Гид по «Плоскому миру» Терри Пратчетта</h1>
+        <h1 id='head' class="text-center fst-italic text-decoration-underline">Гид по «Плоскому миру» Терри Пратчетта</h1>
         <div>
             <a href="https://static.wikia.nocookie.net/discworld/images/0/0b/008b8499e58c2616ae6f7b421fddb34fe53822c6.jpg/revision/latest?cb=20140225124549&path-prefix=ru">
             <img class="rounded mx-auto d-block" width="500px" src="https://static.wikia.nocookie.net/discworld/images/0/0b/008b8499e58c2616ae6f7b421fddb34fe53822c6.jpg/revision/latest?cb=20140225124549&path-prefix=ru">
@@ -214,7 +224,7 @@
             </div>
         </ul>
     </div>
-    <h3>
+    <h3 id="boot">
         <strong>
         Не знаете с чего начать? Обсудите это на <a href='\boards'>форуме!</a>
         </strong>
